@@ -1,7 +1,10 @@
+// La técnica de limpieza de flotantes es comúnmente necesaria cuando se trabaja con elementos flotados en CSS.
+// Cuando elementos dentro de un contenedor están flotados, el contenedor puede no reconocer la altura real de esos elementos flotados, lo que puede provocar problemas de diseño.
+// La pseudo-clase ::after se utiliza para insertar un elemento ficticio al final del contenedor con clear: both;, lo que obliga al contenedor a envolver correctamente a los elementos flotados dentro de él.
 @mixin clearfix {
-    &::after{
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
