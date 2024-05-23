@@ -4,6 +4,14 @@
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+    @include respond(tablePortrit) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+  @include respond(tablePortrit) {
+    max-width: 60rem;
+    padding: 0 3rem
   }
 
   @include clearfix;
@@ -13,6 +21,14 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+      @include respond(tablePortrit) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(tablePortrit) {
+      width: 100% !important;
     }
   }
 
